@@ -1,0 +1,111 @@
+@import './_mixins.scss';
+
+.footer {
+    display: block;
+    padding: 2rem;
+    align-items: center;
+    color: #737373;
+    font-size: 1em;
+
+    &_top {
+        margin: 0 0 30px;
+        padding: 0 2rem;
+
+        @include for-mobile-only {
+            padding: 0;
+            margin-left: -10px;
+        }
+
+        &_a {
+            color: #737373;
+            text-decoration: none;
+        }
+    }
+
+    &_links {
+        box-sizing: border-box;
+        font-size: 13px;
+        max-width: 1000px;
+        padding: 0 2rem;
+        margin: 1em 0;
+
+        @include for-mobile-only {
+            padding: 0;
+            margin-left: -10px;
+        }
+
+        &_item {
+            box-sizing: border-box;
+            display: inline-block;
+            margin-bottom: 16px;
+            min-width: 100px;
+            padding: 0 12px 0 0;
+            vertical-align: top;
+            width: 25%;
+            list-style: none;
+            margin-left: 0;
+
+            @include for-mobile-only {
+                width: 50%;
+            }
+        }
+    }
+
+    &_link {
+        color: #737373;
+        text-decoration: none;
+    }
+
+    &_select {
+        display: inline-block;
+        position: relative;
+        width: auto;
+        padding: 0 2rem;
+
+        @include for-mobile-only {
+            padding: 0;
+            margin-left: -10px;
+        }
+    }
+
+    &_select_label {
+        clip: rect(0 0 0 0);
+        border: 0;
+        display: block;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        margin-bottom: 0;
+    }
+
+    &_select_arrow {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+
+    &_select_icon {
+        font-size: 16px;
+        pointer-events: none;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 20px;
+        height: auto;
+    }
+
+    &_select_medium {
+        background-color: #000;
+        background-image: none;
+        border: 1px solid #333;
+        line-height: 1.7;
+        padding: 12px;
+        padding-left: 50px;
+        text-indent: 0;
+        color: #999;
+        width: 80%;
+    }
+}

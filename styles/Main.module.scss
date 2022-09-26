@@ -1,0 +1,8 @@
+@import './_mixins.scss';
+
+.section {
+    @include for-mobile-only {
+        margin-right: 1rem;
+        padding-top: 10rem;
+    }
+}

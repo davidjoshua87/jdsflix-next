@@ -1,0 +1,140 @@
+@import './_mixins.scss';
+
+.header {
+    background-color: #000;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    left: 0;
+    padding: 16px 3%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20;
+
+    @include for-mobile-only {
+        background-color: rgba(0, 0, 0, .75);
+        height: 30px;
+        padding: 28px 3%;
+    }
+
+    &_left,
+    &_right {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 13px;
+    }
+
+    &_logo {
+        display: inline-block;
+        line-height: 90px;
+        text-decoration: none;
+        vertical-align: middle;
+        align-items: center;
+        flex-direction: row;
+        font-size: 13px;
+        height: auto;
+        padding: 0;
+
+
+        @include for-mobile-only {
+            margin-left: -15px;
+        }
+
+        &_desktop {
+            display: block;
+            width: 110px;
+            height: 40px;
+            cursor: pointer;
+            object-fit: contain;
+
+            @include for-mobile-only {
+                display: none;
+            }
+        }
+
+        &_mobile {
+            display: none;
+            width: 45px;
+            height: auto;
+            cursor: pointer;
+            object-fit: contain;
+
+            @include for-mobile-only {
+                display: block;
+            }
+        }
+    }
+
+    &_text {
+        display: block;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        font-size: 13px;
+
+        @include for-mobile-only {
+            display: none;
+        }
+    }
+
+    &_btn {
+        background-color: #e50914;
+        box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+        color: #fff;
+        font-size: 13px;
+        margin: 0 0 0 8px;
+        padding: 9px 20px;
+        min-width: 142px;
+        min-height: 0;
+        line-height: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        @include for-mobile-only {
+            min-width: 100px;
+            padding: 9px 12px;
+        }
+    }
+
+    &_btn:hover {
+        background: #f40612;
+        box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+    }
+
+    &_link {
+        background-color: transparent;
+        border: 1px solid #888;
+        color: #fff;
+        font-size: 13px;
+        margin: 0 0 0 8px;
+        padding: 6px 30px;
+        min-width: 112px;
+        border-radius: 5px;
+
+        @include for-mobile-only {
+            min-width: 80px;
+            padding: 9px 12px;
+        }
+    }
+
+    &_link:hover {
+        background-color: hsla(0, 0%, 59%, .3);
+        text-decoration: none;
+    }
+
+    &_menu {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        font-size: 13px;
+        width: 42%;
+
+        @include for-mobile-only {
+            width: 75%;
+        }
+    }
+}
